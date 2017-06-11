@@ -7,12 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "GCDAsyncSocket.h" // for TCP
+#import "LXSSocketManager.h"
 #import "GCDAsyncUdpSocket.h" // for UDP
 
-@interface ViewController ()<GCDAsyncSocketDelegate>
-
-@property (nonatomic, strong) GCDAsyncSocket            *clientSockent;
+@interface ViewController ()
 
 @end
 
@@ -20,7 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.clientSockent = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
     //创建几个按钮以供测试
     [self createUI];
 }
@@ -37,58 +34,37 @@
     connectBtn.frame = CGRectMake(100, 100, 100, 30);
     [connectBtn addTarget:self action:@selector(connectBtn:) forControlEvents:UIControlEventTouchUpInside];
 
-    UIButton *receiveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.view addSubview:receiveBtn];
-    [receiveBtn setTitle:@"接受数据" forState:UIControlStateNormal];
-    [receiveBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    receiveBtn.backgroundColor = [UIColor whiteColor];
-    receiveBtn.titleLabel.font = [UIFont systemFontOfSize:14];
-    receiveBtn.frame = CGRectMake(100, 140, 100, 30);
-    [receiveBtn addTarget:self action:@selector(receiveBtn:) forControlEvents:UIControlEventTouchUpInside];
+    UIButton *sendBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:sendBtn];
+    [sendBtn setTitle:@"发送数据" forState:UIControlStateNormal];
+    [sendBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    sendBtn.backgroundColor = [UIColor whiteColor];
+    sendBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+    sendBtn.frame = CGRectMake(100, 140, 100, 30);
+    [sendBtn addTarget:self action:@selector(sendBtn:) forControlEvents:UIControlEventTouchUpInside];
 
-    UIButton *readBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.view addSubview:readBtn];
-    [readBtn setTitle:@"收到的数据" forState:UIControlStateNormal];
-    [readBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    readBtn.backgroundColor = [UIColor whiteColor];
-    readBtn.titleLabel.font = [UIFont systemFontOfSize:14];
-    readBtn.frame = CGRectMake(100, 140, 100, 30);
-    [readBtn addTarget:self action:@selector(readBtn:) forControlEvents:UIControlEventTouchUpInside];
-
+    UIButton *disConnectBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:disConnectBtn];
+    [disConnectBtn setTitle:@"断开连接" forState:UIControlStateNormal];
+    [disConnectBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    disConnectBtn.backgroundColor = [UIColor whiteColor];
+    disConnectBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+    disConnectBtn.frame = CGRectMake(100, CGRectGetMaxY(sendBtn.frame) + 10, 100, 30);
+    [disConnectBtn addTarget:self action:@selector(disConnectBtn:) forControlEvents:UIControlEventTouchUpInside];
 
 }
 
 #pragma mark - activeBtn
 - (void)connectBtn:(UIButton *)sender {
-    [self.clientSockent connectToHost:@"www.baidu.com" onPort:80 error:nil];
+    [[LXSSocketManager managerShare] connect];
 }
 
-- (void)receiveBtn:(UIButton *)sender {
-    NSString *str = @"www.lppz.com";
-    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
-    [self.clientSockent writeData:data withTimeout:-1 tag:0];
+- (void)sendBtn:(UIButton *)sender {
+    [[LXSSocketManager managerShare] sendMsg:@"发送数据"];
 }
 
-- (void)readBtn {
-    [self.clientSockent readDataWithTimeout:20 tag:0];
-}
-
-#pragma mark -GCDAsyncSocketDelegate
-//链接后直接调用
-- (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port {
-    NSLog(@"%@ ===%zi",host,port);
-}
-
-//接受到的数据
-- (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
-    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-    NSLog(@"%@",dict);
-    [self.clientSockent readDataWithTimeout:-1 tag:0];
-}
-
-//链接失败
-- (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err {
-    NSLog(@"错误信息%@",err);
+- (void)disConnectBtn:(UIButton *)sender {
+    [[LXSSocketManager managerShare] disConnect];
 }
 
 @end
