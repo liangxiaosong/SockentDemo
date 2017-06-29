@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		195254871F04E303009419A2 /* LXSSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 195254861F04E303009419A2 /* LXSSocketManager.m */; };
+		1952548C1F04E33B009419A2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1952548A1F04E33B009419A2 /* ViewController.m */; };
+		1952548F1F04E407009419A2 /* LXSUDPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1952548E1F04E407009419A2 /* LXSUDPViewController.m */; };
 		19DC04DE1EE99E21005DE4E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DC04DD1EE99E21005DE4E2 /* main.m */; };
 		19DC04E11EE99E21005DE4E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DC04E01EE99E21005DE4E2 /* AppDelegate.m */; };
-		19DC04E41EE99E21005DE4E2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DC04E31EE99E21005DE4E2 /* ViewController.m */; };
 		19DC04E71EE99E21005DE4E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19DC04E51EE99E21005DE4E2 /* Main.storyboard */; };
 		19DC04E91EE99E21005DE4E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DC04E81EE99E21005DE4E2 /* Assets.xcassets */; };
 		19DC04EC1EE99E21005DE4E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19DC04EA1EE99E21005DE4E2 /* LaunchScreen.storyboard */; };
 		19DC04F71EE99E21005DE4E2 /* SockentDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DC04F61EE99E21005DE4E2 /* SockentDemoTests.m */; };
-		19EA38BA1EEBD1070008DCF1 /* LXSSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19EA38B91EEBD1070008DCF1 /* LXSSocketManager.m */; };
 		593FD13452BFFDD5A0B3FA07 /* libPods-SockentDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21632383DE13DF299EC59E6C /* libPods-SockentDemo.a */; };
 		6FEE201353E373245177F457 /* libPods-SockentDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5299E98633DE09B098C5A7C /* libPods-SockentDemoTests.a */; };
 /* End PBXBuildFile section */
@@ -30,12 +31,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		195254851F04E303009419A2 /* LXSSocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXSSocketManager.h; sourceTree = "<group>"; };
+		195254861F04E303009419A2 /* LXSSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXSSocketManager.m; sourceTree = "<group>"; };
+		195254891F04E33B009419A2 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1952548A1F04E33B009419A2 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1952548D1F04E407009419A2 /* LXSUDPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXSUDPViewController.h; sourceTree = "<group>"; };
+		1952548E1F04E407009419A2 /* LXSUDPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXSUDPViewController.m; sourceTree = "<group>"; };
 		19DC04D91EE99E21005DE4E2 /* SockentDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SockentDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19DC04DD1EE99E21005DE4E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		19DC04DF1EE99E21005DE4E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		19DC04E01EE99E21005DE4E2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		19DC04E21EE99E21005DE4E2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		19DC04E31EE99E21005DE4E2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		19DC04E61EE99E21005DE4E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19DC04E81EE99E21005DE4E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19DC04EB1EE99E21005DE4E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,8 +48,6 @@
 		19DC04F21EE99E21005DE4E2 /* SockentDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SockentDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19DC04F61EE99E21005DE4E2 /* SockentDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SockentDemoTests.m; sourceTree = "<group>"; };
 		19DC04F81EE99E21005DE4E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19EA38B81EEBD1070008DCF1 /* LXSSocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXSSocketManager.h; sourceTree = "<group>"; };
-		19EA38B91EEBD1070008DCF1 /* LXSSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXSSocketManager.m; sourceTree = "<group>"; };
 		21632383DE13DF299EC59E6C /* libPods-SockentDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SockentDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D5FCA9F9BED37768223A451 /* Pods-SockentDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SockentDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SockentDemoTests/Pods-SockentDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		56EA8D4A82669308F6B5FBEC /* Pods-SockentDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SockentDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SockentDemo/Pods-SockentDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +76,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		195254841F04E303009419A2 /* TCPTool */ = {
+			isa = PBXGroup;
+			children = (
+				195254851F04E303009419A2 /* LXSSocketManager.h */,
+				195254861F04E303009419A2 /* LXSSocketManager.m */,
+			);
+			path = TCPTool;
+			sourceTree = "<group>";
+		};
+		195254881F04E33B009419A2 /* TCPVIewController */ = {
+			isa = PBXGroup;
+			children = (
+				195254891F04E33B009419A2 /* ViewController.h */,
+				1952548A1F04E33B009419A2 /* ViewController.m */,
+			);
+			path = TCPVIewController;
+			sourceTree = "<group>";
+		};
+		1952548B1F04E33B009419A2 /* UDPViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1952548D1F04E407009419A2 /* LXSUDPViewController.h */,
+				1952548E1F04E407009419A2 /* LXSUDPViewController.m */,
+			);
+			path = UDPViewController;
+			sourceTree = "<group>";
+		};
 		19DC04D01EE99E21005DE4E2 = {
 			isa = PBXGroup;
 			children = (
@@ -96,11 +126,11 @@
 		19DC04DB1EE99E21005DE4E2 /* SockentDemo */ = {
 			isa = PBXGroup;
 			children = (
-				19EA38B71EEBD0F50008DCF1 /* Tool */,
+				195254881F04E33B009419A2 /* TCPVIewController */,
+				1952548B1F04E33B009419A2 /* UDPViewController */,
+				195254841F04E303009419A2 /* TCPTool */,
 				19DC04DF1EE99E21005DE4E2 /* AppDelegate.h */,
 				19DC04E01EE99E21005DE4E2 /* AppDelegate.m */,
-				19DC04E21EE99E21005DE4E2 /* ViewController.h */,
-				19DC04E31EE99E21005DE4E2 /* ViewController.m */,
 				19DC04E51EE99E21005DE4E2 /* Main.storyboard */,
 				19DC04E81EE99E21005DE4E2 /* Assets.xcassets */,
 				19DC04EA1EE99E21005DE4E2 /* LaunchScreen.storyboard */,
@@ -125,15 +155,6 @@
 				19DC04F81EE99E21005DE4E2 /* Info.plist */,
 			);
 			path = SockentDemoTests;
-			sourceTree = "<group>";
-		};
-		19EA38B71EEBD0F50008DCF1 /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-				19EA38B81EEBD1070008DCF1 /* LXSSocketManager.h */,
-				19EA38B91EEBD1070008DCF1 /* LXSSocketManager.m */,
-			);
-			path = Tool;
 			sourceTree = "<group>";
 		};
 		5F96544F670A372D979A3C4C /* Frameworks */ = {
@@ -357,9 +378,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19EA38BA1EEBD1070008DCF1 /* LXSSocketManager.m in Sources */,
-				19DC04E41EE99E21005DE4E2 /* ViewController.m in Sources */,
+				1952548F1F04E407009419A2 /* LXSUDPViewController.m in Sources */,
+				195254871F04E303009419A2 /* LXSSocketManager.m in Sources */,
 				19DC04E11EE99E21005DE4E2 /* AppDelegate.m in Sources */,
+				1952548C1F04E33B009419A2 /* ViewController.m in Sources */,
 				19DC04DE1EE99E21005DE4E2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

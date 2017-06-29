@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "LXSSocketManager.h"
-#import "GCDAsyncUdpSocket.h" // for UDP
 
 @interface ViewController ()
 
@@ -51,7 +50,6 @@
     disConnectBtn.titleLabel.font = [UIFont systemFontOfSize:14];
     disConnectBtn.frame = CGRectMake(100, CGRectGetMaxY(sendBtn.frame) + 10, 100, 30);
     [disConnectBtn addTarget:self action:@selector(disConnectBtn:) forControlEvents:UIControlEventTouchUpInside];
-
 }
 
 #pragma mark - activeBtn
